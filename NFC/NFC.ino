@@ -68,7 +68,7 @@ void loop() {
 
   // 检查是否为授权卡
   if (isAuthorized(nuidPICC)) {
-    if (!doorOpen) {  // **防止重复触发**
+    if (!doorOpen) { 
       myservo.write(SERVO_OPEN_ANGLE);
       Serial.println("门已打开");
       doorOpen = true;
